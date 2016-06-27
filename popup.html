@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+	#wrapper {
+		margin: 0 auto;
+		width:960px;	
+		border: 1px red solid;
+	}
+	
+		
+	@-webkit-keyframes autopopup {
+		from {opacity: 0; margin-top:-200px;}
+		to {opacity: 1;}
+	}
+	@-moz-keyframes autopopup {
+		from {opacity: 0;margin-top:-200px;}
+		to {opacity: 1;}
+	}
+	@keyframes autopopup {
+		from {opacity: 0;margin-top:-200px;}
+		to {opacity: 1;}
+	}
+
+
+	#popup-overlay {
+		background-color: rgba(0,0,0,0.8); /* rgba(red, green, blue, alpha) */
+		position: fixed; /* The element is positioned relative to the browser window */
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:0;
+		
+		/* display:none; 4 GREENSOCK */		
+		z-index:999;
+					
+		-webkit-animation:autopopup 2s;
+		-moz-animation:autopopup 2s;
+		animation:autopopup 2s; /* Call this animation */
+		
+	}
+
+	#popup-overlay:target { 
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		transition:all 4s;
+		/* Hide the overlay div. Note that the DIV#popup-conatiner is inside the OVERLAY DIV. So, it too will hide */
+		opacity: 0;
+		visibility: hidden;
+	} 
+
+	@media (min-width: 768px){
+		.popup-container {
+			width:640px;
+		}
+	}
+	@media (max-width: 767px){
+		.popup-container {
+			width:100%;
+		}
+	}
+
+	.popup-container {
+		position: relative;
+		margin:7% auto;
+		padding:30px 50px;
+		background-color: #fafafa;
+		color:#333;
+		border-radius: 3px;
+	}
+
+	a.popup-close {
+		position: absolute;
+		top:3px;
+		right:3px;
+		background-color: #333;
+		padding:7px 10px;
+		font-size: 20px;
+		text-decoration: none;
+		line-height: 1;
+		color:#fff;
+	}
+	
+
+</style>
+</head>
+
+
+<body>
+<div id="wrapper">
+
+	<h1>Welcom to our site</h1>
+    <p>er 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the u</p>
+
+	<div id="popup-overlay"><!-- overlay has fixed positoin covering the whole page, not just the #wrapper DIV -->		
+        <div class="popup-container">
+    
+                <h2 id="heaher2" style="text-align:center;">Bahisfaktor ile kazan!</h2>
+                
+          		<p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                </p>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                
+                
+            <a class="popup-close" href="#popup-overlay">X</a>
+        </div>  
+	</div>
+    
+    
+</div>
+</body>
+</html>
